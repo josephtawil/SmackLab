@@ -5,11 +5,31 @@
 .bg {
   background-color: #212121;
   padding: 2em;
+  padding-top: 0;
+}
+
+.bgShadow {
+  border-radius: 50px;
+  background: linear-gradient(145deg, #ffffff, #d8d8d8);
+  box-shadow: 20px 20px 30px #cccccc, -20px -20px 30px #f0f0f0;
+  margin-bottom: 3em;
 }
 
 #Contact {
   background-color: #272827;
   margin-top: 8em;
+}
+
+.Techniques {
+  display: flex;
+  justify-content: center;
+  margin-left: 5em;
+}
+
+.Techniques2 {
+  display: flex;
+  justify-content: center;
+  padding: 2em;
 }
 
 .text-white {

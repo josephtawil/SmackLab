@@ -1,6 +1,4 @@
 import React from "react";
-// import lgLogo from "../img/sl_md.png";
-// import logo from "../img/logo1.png";
 import { Paper, Grid, makeStyles, Typography } from "@material-ui/core";
 import "./Home.css";
 import "../../App.css";
@@ -19,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
     textAlign: "center",
-  },
+  }
 }));
 
 const Home = () => {
@@ -46,33 +44,37 @@ const Home = () => {
               </Typography>
             </div>
           </Grid>
-        </Grid>
-        <Grid container spacing={3}>
-          <Grid item xs={6} sm={6}>
-            <ProfileCard
-              title="Profile"
-              fullName={fullName}
-              letter={letter}
-              text="View Profile"
-            />
+          <Grid container>
+            <Grid item xs={2}>
+              <Grid container direction="column" spacing={3}>
+                <Grid item xs={2} sm={2}>
+                  <ProfileCard
+                    title="Profile"
+                    fullName={fullName}
+                    letter={letter}
+                    text="View Profile"
+                    link="/profile"
+                  />
+                </Grid>
+              </Grid>
+            </Grid>
+
+            <Grid item xs={1}></Grid>
+              <Grid item xs={10} sm={9}>
+                <Grid container direction="row" spacing={3}>
+                  <Grid item xs={1}></Grid>
+                  <Grid item xs={12} sm={11} direction="row">
+                    <Calc title="Calculator" text="Find your Info" />
+                  </Grid>
+                </Grid>
+              </Grid>  
           </Grid>
-          <Grid item xs={6} sm={6}>
-            <Calc title="Calculator" text="Find your Info" />
-          </Grid>
-        </Grid>
-        <Grid container spacing={3}>
-          <Grid item xs={8}>
-            <Card title="Workouts" text="View Workouts" />
-          </Grid>
-          <Grid item xs={4}>
-            <Card title="Tips" text="View Tips" />
-          </Grid>
+          
         </Grid>
       </div>
     </div>
   );
-};
+}
 
 export default Home;
 
-//BOTTOM CODE IS ACTUALLY NAVBAR - this has been MIGRATED YO!
